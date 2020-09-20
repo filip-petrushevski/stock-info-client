@@ -3,10 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import theme from "./theme";
+import { ThemeProvider } from '@material-ui/core/styles';
+import { createBrowserHistory } from 'history';
+import { Router } from 'react-router-dom';
+
+const history = createBrowserHistory();
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router history={history}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
