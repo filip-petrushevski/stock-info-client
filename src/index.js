@@ -12,13 +12,13 @@ const history = createBrowserHistory();
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <Router history={history}>
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
     </Router>
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 

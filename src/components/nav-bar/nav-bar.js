@@ -75,7 +75,7 @@ function NavBar() {
                         user && <Tab label="All Companies" component={Link} to="/companies" />
                     }
                     {
-                        user && <Hidden smDown><Tab label="My Companies" component={Link} to="/my-companies" /></Hidden>
+                        user && <Tab label="My Companies" component={Link} to="/my-companies" />
                     }
                 </Tabs>
                 {

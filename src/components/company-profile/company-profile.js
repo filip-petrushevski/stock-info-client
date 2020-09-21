@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ApiService from '../../services/api-service/api-service';
 import CanvasJSReact from '../../utils/canvas-js/canvasjs.react';
-import { Grid, CardMedia, Card, Typography, Link } from '@material-ui/core';
+import { Grid, CardMedia, Card, Typography, Link, CircularProgress } from '@material-ui/core';
 import BodyContainer from '../body-container/body-container'
 import Title from '../title/title';
 
@@ -94,11 +94,12 @@ export default class CompanyProfile extends Component {
                             </Grid>
                             <Grid item sm={6} style={{marginBottom: 0, paddingBottom: 0}}>
                                 <Card variant="outlined" style={{ padding: 4, margin: 8, height: 180, width: 180 }}>
-                                    <CardMedia
-                                        variant="outlined"
+                                    { this.state.company ? 
+                                        <CardMedia
                                         style={{ height: 180, width: 180 }}
-                                        image={this.state.company && this.state.company.logo}
-                                    />
+                                        image={this.state.company.logo}/> :
+                                        <CircularProgress />
+                                    }
                                 </Card>
                             </Grid>
                             <Grid item sm={6}>
