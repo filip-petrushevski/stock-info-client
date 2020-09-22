@@ -16,4 +16,5 @@ Student ID number: 171516
 - Navigate to the application root directory
 - Run `npm install` and `npm start`
 ## Demo
-![Farmers Market Finder Demo](demo/demo.gif)
+![Demo1](demo/demo.gif)
+![Demo2](demo/demo2.gif)
